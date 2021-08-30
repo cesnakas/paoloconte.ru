@@ -1,0 +1,720 @@
+//
+// Modals
+// --------------------------------------------------
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+// Kill the scroll on the body
+.modal-open {
+  overflow: hidden;
+}
+
+// Container that the modal scrolls within
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  z-index: @zindex-modal;
+  -webkit-overflow-scrolling: touch;
+  font-size: 14px;
+  background-color: rgba(255,255,255,.75) !important;
+
+  // Prevent Chrome on Windows from adding a focus outline. For details, see
+  // https://github.com/twbs/bootstrap/pull/10951.
+  outline: 0;
+
+  @media @max767 {
+    top: 50px;
+  }
+
+  &.cityModal {
+    @media @max767 {
+      top: 0;
+    }
+  }
+
+  &.enterModal {
+    @media @max767 {
+      z-index: 100;
+    }
+    .modal-content {
+      @media @max767 {
+        background: #fcfcfc;
+      }
+    }
+  }
+
+  // When fading in the modal, animate it to slide down
+  &.fade .modal-dialog {
+    .translate3d(0, 100%, 0);
+    .transition-transform(~"0.3s ease-out");
+  }
+  &.in .modal-dialog {
+    .translate3d(0, 0, 0)
+  }
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+.close{
+  position: absolute;
+  top: 31px;
+  right: 26px;
+  width:20px;
+  height: 20px;
+  border:none;
+  color: #828282;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCMDJGMEMyNUE2MUYxMUU0QjM1M0UzMUIwNDQ0QzJGNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCMDJGMEMyNkE2MUYxMUU0QjM1M0UzMUIwNDQ0QzJGNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkIwMkYwQzIzQTYxRjExRTRCMzUzRTMxQjA0NDRDMkY2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkIwMkYwQzI0QTYxRjExRTRCMzUzRTMxQjA0NDRDMkY2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Ab+U6gAAAGFJREFUeNpiYKAhkKOmXgUgfg3EdmQYZgfVq4hLwo4Mw+wJKbCjhmGkGEq0YcQYSrJh+Awl2zBshlJsGLqhRBnGxEBnQFUvUzVSqJpsqJqwqZr1qFo40KT4omoBSzUAEGAA9tcpqAVm8pIAAAAASUVORK5CYII=');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  cursor: pointer;
+  //transition: all 0.2s ease-out;
+
+  @media @max767 {
+    top: 10px;
+    right: 10px;
+  }
+
+  &:hover{
+    transform: rotate(90deg);
+  }
+}
+
+.close-small{
+  opacity: 0.26;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0Nzc2N0FCNkFBQkUxMUU0OTMwQkUxNDRCRTg0MjVGNCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0Nzc2N0FCN0FBQkUxMUU0OTMwQkUxNDRCRTg0MjVGNCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ3NzY3QUI0QUFCRTExRTQ5MzBCRTE0NEJFODQyNUY0IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjQ3NzY3QUI1QUFCRTExRTQ5MzBCRTE0NEJFODQyNUY0Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+c55pzgAAAElJREFUeNpiYBgMYA4QyxBQA5KfjUtiGx4DQOJb8VmAywCCGnEpJFojugEWpGqEAZDG31CaJEC2zWT7mezQpiieKUph9AUAAQYAEZkTHoMYKxwAAAAASUVORK5CYII=');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  &:hover{
+    opacity: 0.52;
+    transform: rotate(90deg);
+  }
+}
+
+
+// Shell div to position the modal with bottom padding
+.modal-dialog {
+  position: relative;
+  margin: 100px auto 50px;
+  width: 994px;
+  max-width: calc(~'100vw - 30px');
+  top:0;
+
+  box-shadow: 0px 31px 71px 0px rgba(0, 0, 0, 0.39);
+  //box-shadow:         0px 31px 71px 0px rgba(0, 0, 0, 0.39);
+  /*-webkit-transition: transform 0.3s ease-out, top 0.03s linear !important;
+  -moz-transition: transform 0.3s ease-out, top 0.03s linear !important;
+  -ms-transition: transform 0.3s ease-out, top 0.03s linear !important;
+  -o-transition: transform 0.3s ease-out, top 0.03s linear !important;
+  transition: transform 0.3s ease-out, top 0.03s linear !important;*/
+
+  @media @max1023 {
+    margin-top: 15px;
+  }
+
+
+  .item{
+    padding-bottom: 1px;
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+
+  .desc{
+    font-size: 12px;
+    color: #b3b2b2;
+    padding-bottom: 2px;
+  }
+
+
+
+
+}
+
+// Actual modal
+.modal-content {
+  position: relative;
+  background-color: #fff;
+
+  background-clip: padding-box;
+  // Remove focus outline from opened modal
+  outline: 0;
+}
+
+.line{
+  margin-bottom: 15px;
+  &:last-of-type{
+    margin-bottom: 0 !important;
+  }
+}
+
+// Modal background
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background: rgba(130, 130, 130, 0.5);
+  // Fade for backdrop
+  &.fade { .opacity(0); }
+  &.in { .opacity(1); }
+
+  @media @max767 {
+    background: transparent;
+    top: 50px;
+  }
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+  padding: 25px 21px 20px;
+  min-height: (@modal-title-padding + @modal-title-line-height);
+}
+
+.modal-title-desc-form {
+  margin: 10px 0;
+}
+
+// Title text within header
+.modal-title {
+  margin: 0;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.modalZoomImg {
+
+  .modal-dialog {
+    max-height: calc(~'100vh - 80px');
+    margin-top: 20px;
+  }
+
+  .modal-img {
+    width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+  }
+
+  .modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body {
+  position: relative;
+  padding: 16px 24px 16px;
+
+  &.bg {
+
+    a {
+      color: #AAAAAA;
+
+      &:hover {
+        color: #191818;
+      }
+    }
+  }
+}
+
+// Footer (for actions)
+.modal-footer {
+  padding: 13px 109px 40px;
+  text-align: right; // right align buttons
+  &:extend(.clearfix all); // clear it in case folks use .pull-* classes on buttons
+
+  // Properly space out buttons
+  .btn + .btn {
+    margin-left: 5px;
+    margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+  }
+  // but override that for button groups
+  .btn-group .btn + .btn {
+    margin-left: -1px;
+  }
+  // and override it for block buttons as well
+  .btn-block + .btn-block {
+    margin-left: 0;
+  }
+}
+
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+/*
+
+// Scale up the modal
+@media (min-width: @screen-sm-min) {
+  // Automatically set modal's width for larger viewports
+  .modal-dialog {
+    width: @modal-md;
+    margin: 30px auto;
+  }
+  .modal-content {
+    .box-shadow(0 5px 15px rgba(0,0,0,.5));
+  }
+
+  // Modal sizes
+  .modal-sm { width: @modal-sm; }
+}
+
+@media (min-width: @screen-md-min) {
+  .modal-lg { width: @modal-lg; }
+}
+*/
+#offerInbasketModal {
+
+  .title-1 {
+    margin-bottom: 25px;
+  }
+}
+
+.fastOrderModal {
+
+  & .emulate-table,
+  & .emulate-cell {
+
+    @media @mobile {
+      display: block !important;
+    }
+  }
+
+  img {
+
+    @media @mobile {
+      max-height: 270px;
+    }
+  }
+}
+
+.modal {
+
+  &.fastViewModal {
+
+    .modal-dialog {
+
+      @media @max1400 {
+        margin: 0 auto;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+
+    .modal-color {
+      order: -1;
+    }
+  }
+
+  &-new {
+    padding: 60px 60px 85px;
+    background-color: #fff;
+
+    @media @max767 {
+      padding: 15px 15px 20px;
+    }
+
+    &.modal-new--auth {
+      width: 100%;
+      margin: auto 0;
+      padding: 50px 105px;
+
+      @media @max767 {
+        padding: 50px 30px;
+        background: #fcfcfc;
+      }
+
+      .title-4 {
+        font-size: 16px;
+        letter-spacing: 0.02em;
+        margin-bottom: 18px;
+        color: #000;
+        text-align: center;
+        @media @max767 {
+          font-size: 16px;
+        }
+      }
+      .line {
+        margin-bottom: 18px;
+
+        &.error {
+          .form__label {
+            color: #950F21;
+          }
+          input {
+            border-color: #950F21 !important;
+          }
+        }
+
+        &--flex {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          a {
+            &:last-of-type {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+      .form__label {
+        margin-bottom: 5px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.3;
+        letter-spacing: 0.02em;
+        color: #828282;
+        text-transform: none;
+      }
+      input[type=password],
+      input[type=text] {
+        height: 34px;
+        font-size: 12px;
+        letter-spacing: 0.02em;
+        border: 1px solid #5A5A5A;
+        &:focus {
+          border: 1px solid #000000;
+        }
+      }
+      .link {
+        font-size: 12px;
+        font-weight: 500;
+        color: #828282;
+        transition: .3s;
+        &:hover {
+          opacity: 0.7;
+        }
+        &--reg {
+          color: #000;
+        }
+      }
+
+      .btn {
+        width: 100%;
+        height: 34px;
+        margin: 20px 0 14px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 34px;
+      }
+      .soc-wrap {
+        line-height: 35px;
+        margin: 20px 0 0;
+      }
+      .result_cont,
+      .errors_cont {
+        p {
+          margin-bottom: 15px;
+          font-size: 12px;
+        }
+      }
+    }
+
+    &.modal-new--auth-page {
+      padding: 0;
+      margin-bottom: 30px;
+    }
+
+    .title-1 {
+      margin-bottom: 39px;
+
+      @media @mobile {
+        margin-bottom: 20px;
+        padding: 0 20px;
+        text-align: center;
+      }
+    }
+    .form__item {
+      margin-bottom: 13px;
+    }
+    .b-checkbox {
+      margin-top: 27px;
+      margin-bottom: 30px;
+
+      @media @max767 {
+        margin: 15px 0;
+      }
+    }
+    .modal-body {
+      padding: 0;
+    }
+    .modal-content {
+      position: static;
+    }
+  }
+
+  &-basket {
+    width: 994px;
+    max-width: calc(~'100vw - 30px');
+    background-image: url('/local/templates/paoloconte/images/background/modal-basket.svg');
+    background-repeat: no-repeat;
+    background-position: 50% -30px;
+    background-color: #fff;
+
+    &__info {
+      display: flex;
+      margin-bottom: 30px;
+
+      &--review {
+        display: block;
+
+        .modal-basket__img {
+          float: left;
+        }
+
+        .ready_props {
+          display: inline-block;
+          vertical-align: top;
+        }
+      }
+    }
+    &__img {
+
+      img {
+        width: 84px;
+        max-height: 90px;
+        object-fit: contain;
+      }
+    }
+
+    &__params {
+
+      div {
+        margin-left: 25px;
+
+        &:not(:empty) {
+          margin-bottom: 25px;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &-price {
+    background-image: url('/local/templates/paoloconte/images/background/modal-price.png');
+    background-repeat: no-repeat;
+    background-position: 60% -30px;
+  }
+
+  &-text {
+    margin-bottom: 20px;
+  }
+
+  &-pp {
+    display: flex;
+    margin-top: 30px;
+    align-items: flex-start;
+
+    @media @max767 {
+      flex-direction: column-reverse;
+    }
+
+    &__text {
+      max-width: 380px;
+      color: #999999;
+
+      a {
+        color: #999999;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .btn {
+      margin-right: 20px;
+      padding: 13px 42px;
+
+      @media @max767 {
+        margin-top: 15px;
+        margin-right: 0;
+      }
+      @media @mobile {
+        width: 100%;
+      }
+    }
+  }
+
+  &-btns {
+    display: flex;
+    align-items: center;
+
+    @media @mobile {
+      flex-wrap: wrap;
+    }
+
+    .btn {
+
+      @media @mobile {
+        width: 100%;
+      }
+
+      &--transparent {
+        margin-right: 10px;
+
+        @media @mobile {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+
+        :after {
+          content: '';
+          display: inline-block;
+          margin-left: 11px;
+          padding: 3px;
+          border: solid #333333;
+          border-width: 0 2px 2px 0;
+          transform: rotate(-45deg);
+          transition: .2s;
+        }
+      }
+    }
+  }
+
+  &-color {
+    margin-bottom: 23px;
+
+    @media @mobile {
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    input {
+      display: none;
+
+      &:checked + label {
+        width: 34px;
+        height: 34px;
+        margin-right: 7px;
+        border-color: #fff;
+        outline: 1px solid #191818;
+
+        @media @max767 {
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+
+    label {
+      display: block;
+      width: 36px;
+      height: 36px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      border: 2px solid transparent;
+      cursor: pointer;
+
+      @media @max767 {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  /* modal-size */
+  &-s {
+    margin-bottom: 23px;
+
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    input {
+      display: none;
+
+      &:checked + label {
+        border-color: #191818;
+        font-weight: 500;
+      }
+    }
+
+    label {
+      width: 36px;
+      margin-bottom: 5px;
+      text-align: center;
+      border: 1px solid transparent;
+      line-height: 34px;
+      cursor: pointer;
+
+      @media @max767 {
+        width: 30px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+/*vacancy map modal*/
+.getMapModal {
+
+  .close {
+    top: 16px;
+    right: 24px;
+
+    @media @max767 {
+      top: 10px;
+      right: 10px;
+    }
+  }
+
+  .map-container {
+    margin-top: 25px;
+  }
+}

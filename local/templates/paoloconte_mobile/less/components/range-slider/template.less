@@ -1,0 +1,98 @@
+/* Ion.RangeSlider, armanpalace Skin*/
+
+// ===================================================================================================================*/
+
+/* =====================================================================================================================
+*/
+
+.irs {
+    height: 32px;
+}
+.irs-with-grid {
+    height: 60px;
+}
+.irs-line {
+    height: 2px;
+    top: 7px;
+    background: #d2d2d2;
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow:    inset 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+  box-shadow:         inset 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+}
+    .irs-line-left {
+        height: 8px;
+        background-position: 0 -30px;
+    }
+    .irs-line-mid {
+        height: 8px;
+        background-position: 0 0;
+    }
+    .irs-line-right {
+        height: 8px;
+        background-position: 100% -30px;
+    }
+
+.irs-diapason {
+    height: 2px;
+    top: 7px;
+    background:#f99f1b;
+}
+
+.irs-slider {
+    width: 0px; height: 20px;
+    top: 0px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCRjA1NUNEMzQ3RDAxMUU0QTFFOEQzNEQ5RjFCQzY3RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCRjA1NUNENDQ3RDAxMUU0QTFFOEQzNEQ5RjFCQzY3RCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkJGMDU1Q0QxNDdEMDExRTRBMUU4RDM0RDlGMUJDNjdEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkJGMDU1Q0QyNDdEMDExRTRBMUU4RDM0RDlGMUJDNjdEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+rC8GNQAAAiZJREFUeNqcVUFrGkEU3p1ok0KLqUktEaGQg7n3kkMp9OrRQ3rrKT14qvHWs3jpP+ipJLl6SgL9A1IoFExBxIZAAsEao0GRVo2us9P3JW9k1k2C5sHHjDPv+/bt7DdPWyllTYZNQYMgzPEoeMtlSIzEVTepRkBQA1osslAoFNZbrdaX4XB47LruAKA4xhr2kMO59q2CvBFMJpNL7Xb7K61JdXdIytlNpVIRcDyiplgikXje7XYLasqg3O/geERZEKU/bTabu2rGaDQaO+CyhqWrW8jn82/pnOSsguCAy2dq6+pC1Wp12589UPI8rZzfS4Tw9RxrkwEuNHSVjwiRXq936jv58y3llG0P5MUnnyC40ICWzaUuU+kn5Kmg6YDR0TI5ruX12VzYCqxdTjrFEUKs0vRSmzYAj1oPDCpmpC+BvgFWv9+vTSaK0HsfWSx+8K3RK1+M9/kqjehgf/jILz5bIvyRnv3sGpiLSNYnWKvVfurrOP4o2Wz23UNtk8vlNvRHGduGEK9UKnuzCoIDrmkb/aVXYrHYOpV/OK1YvV7/BQ64Y2ObV4/wMhqNvi6VSgf0Ku49r+mWy+Vv8Xj8DTieq2c2By4bCa/S6fRmsVjc73Q6f6SUI8dxrqjDnGEtk8lsIodzQ2ZzsHWD5aYa4NKf8FOBx7yOcOAwwj/CXx6v4BLUZvma481vwU+cZ/Gg0UlgjSFhwHDYKsoUuC2m+gswhXT8F2AAxEao5qwhAjgAAAAASUVORK5CYII=);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    cursor: pointer;
+    &::before{
+      width: 15px !important;
+      height: 15px !important;
+      top: 0% !important;
+      left: -10px !important;
+      border-radius: 15px;
+      background: #fff !important;
+      -webkit-box-shadow: -2px 3px 5px 0px rgba(0, 0, 0, 0.17);
+      -moz-box-shadow:    -2px 3px 5px 0px rgba(0, 0, 0, 0.17);
+      box-shadow:         -2px 3px 5px 0px rgba(0, 0, 0, 0.17);
+    }
+}
+#irs-active-slider, .irs-slider:hover {
+   // background-position: 0 -120px;
+}
+
+.irs-min, .irs-max {
+    color: #999;
+    font-size: 10px; line-height: 1.333;
+    text-shadow: none;
+    top: 18px; padding: 1px 3px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 3px;
+    display: none !important;
+}
+.lt-ie9 .irs-min, .lt-ie9 .irs-max {
+    background: #ccc;
+}
+
+.irs-from, .irs-to, .irs-single {
+    color: #7a7a7a;
+    font-size: 10px; line-height: 1.333;
+    text-shadow: none;
+     font-size: 13px;
+    top: 20px;
+
+
+}
+.lt-ie9 .irs-from, .lt-ie9 .irs-to, .lt-ie9 .irs-single {
+    background: #999;
+}
+
+.irs-grid-pol {
+    background: #99a4ac;
+}
+.irs-grid-text {
+    color: #99a4ac;
+}
+
+.irs-disabled {
+}

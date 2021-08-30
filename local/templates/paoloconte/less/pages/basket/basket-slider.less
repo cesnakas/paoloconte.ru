@@ -1,0 +1,154 @@
+.basket-slider {
+  margin-bottom: 50px;
+  padding: 0 40px;
+
+  @media @max1023 {
+    margin-bottom: 30px;
+  }
+  @media @max767 {
+    padding: 0 3px;
+  }
+
+  &__inner {
+    position: relative;
+
+    .owl {
+
+      &-prev,
+      &-next {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 40px;
+        opacity: .2;
+        transition: .2s;
+
+        @media @max1023 {
+          width: 30px;
+        }
+        @media @max767 {
+          width: 18px;
+          height: 48px;
+          top: 50%;
+          bottom: 50%;
+          transform: translateY(-50%);
+          background-color: #191818;
+          opacity: 1;
+        }
+
+        &:after,
+        &:before {
+          content: '';
+          width: 2px;
+          height: 25px;
+          position: absolute;
+          background-color: #333333;
+          left: 50%;
+
+          @media @max767 {
+            height: 15px;
+            background-color: #fff;
+          }
+        }
+
+        &:before {
+          top: calc(~'50% - 23px');
+
+          @media @max767 {
+            top: calc(~'50% - 13px');
+          }
+        }
+        &:after {
+          top: calc(~'50%');
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &-prev {
+        right: calc(~'100% + 0px');
+
+        &:before {
+          transform: rotate(25deg);
+        }
+        &:after {
+          transform: rotate(-25deg);
+        }
+      }
+
+      &-next {
+        left: calc(~'100% + 0px');
+
+        &:before {
+          transform: rotate(-25deg);
+        }
+        &:after {
+          transform: rotate(25deg);
+        }
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    .tag {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 2;
+    }
+  }
+
+  &__img {
+    display: flex;
+    height: 222px;
+    margin-bottom: 10px;
+    align-items: flex-end;
+    justify-content: center;
+
+    @media @max767 {
+      height: 166px;
+    }
+
+    img {
+      max-height: 222px;
+
+      @media @max767 {
+        max-height: 166px;
+      }
+    }
+  }
+
+  &-price {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__old {
+      margin: 0 5px;
+      position: relative;
+      color: #BDBDBD;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        height: 1px;
+        background-color: #BDBDBD;
+      }
+    }
+
+    &__current {
+      margin: 0 5px;
+    }
+  }
+
+  h3 {
+    text-align: center;
+  }
+}

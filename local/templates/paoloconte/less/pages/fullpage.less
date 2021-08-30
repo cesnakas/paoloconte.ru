@@ -1,0 +1,123 @@
+.full-page-wrap{
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background: @main-color-1;
+
+  .left-part{
+    width: 260px;
+    position: fixed;
+    height: 100%;
+    border-left: 8px solid @main-color-1;
+
+    z-index: 1;
+    .logo{
+      display: block;
+      height: 169px;
+      background-position: 50% 52%;
+      background-repeat: no-repeat;
+    }
+    .promo-menu{
+      li{
+        border-top: 1px solid #e3e0db;
+        //a{
+        //  font-size: 15px;
+        //  color: #9a9a9a;
+        //  display: block;
+        //  text-align: center;
+        //  text-decoration: none;
+        //  padding: 13px 15px;
+        //  -webkit-transition: all 0.2s ease;
+        //  -moz-transition: all 0.2s ease;
+        //  -ms-transition: all 0.2s ease;
+        //  -o-transition: all 0.2s ease;
+        //  transition: all 0.2s ease;
+        //  &:hover{
+        //    color: #4b4b4b;
+        //  }
+        //}
+        &:last-child{
+          border-bottom: 1px solid #e3e0db;
+        }
+      }
+    }
+    .bottom-wrap{
+      text-align: center;
+      position: absolute;
+      bottom: 31px;
+      right: 0;
+      left: 0;
+      .social{
+        margin: 9px 0;
+          a{
+            color: #9a9a9a;
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -ms-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+              font-size: 18px;
+              display: inline-block;
+              margin: 0 8px;
+            &:hover{
+              color: #4b4b4b;
+            }
+          }
+        }
+      }
+      .text{
+        font-size: 12px;
+      }
+    }
+
+  .right-part{
+
+    padding-left: 260px;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    .promo-slider{
+      height: 100%;
+      width: 100%;
+      background: @main-color-1;
+
+      .owl-controls{
+        z-index: 1;
+        height: auto;
+        .owl-dots {
+          bottom: 90px;
+        }
+      }
+
+      .owl-stage-outer,
+      .owl-stage,
+      .owl-item{
+        height: 100%;
+      }
+
+      .slide{
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: cover;
+        .slider-wrap{
+          .slider-content{
+            color: #fff;
+            font-family: PT Sans-serif;
+            text-align: center;
+            padding: 40px 40px 236px;
+            .title{
+              text-transform: uppercase;
+              font-size: 36px;
+              margin-bottom: 19px;
+            }
+            .description{
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

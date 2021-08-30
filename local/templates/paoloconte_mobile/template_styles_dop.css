@@ -1,0 +1,4 @@
+#sheepla-widget-control input[type=button] {
+    opacity: 1;
+    min-width:45px;
+}

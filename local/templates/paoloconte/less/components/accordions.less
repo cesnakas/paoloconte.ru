@@ -1,0 +1,233 @@
+
+.panel-heading{
+  position: relative;
+  a{
+
+    i{
+      font-size: 16px;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+    }
+    &.collapsed{
+      i{
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.styled-accordion{
+  .panel{
+    padding: 0 0 20px 0px;
+
+    .panel-heading{
+      a{
+        color: #383838;
+        font-size: 15px;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+
+        i{
+          display: block;
+          position: absolute;
+          width: 18px;
+          height: 18px;
+          right: 0;
+          text-align: center;
+          font-size: 11px;
+          line-height: 20px;
+          top: 50%;
+          margin-top: -9px;
+          background: #e8e8e8;
+          &.plus{
+            opacity: 0;
+          }
+          &.minus{
+            opacity: 1;
+          }
+        }
+        &.collapsed{
+          border: none;
+
+          i{
+            &.plus{
+              opacity: 1;
+            }
+            &.minus{
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .panel-collapse{
+      &.in{
+
+      }
+      .panel-body{
+        padding: 15px 0 0 15px;
+
+        .p{
+          margin: 0 0 18px;
+          &:last-child{
+            margin: 0 0 4px;
+          }
+
+          &.faq-mod{
+            color: #323232;
+            border-radius: 4px;
+            font-size: 13px;
+            line-height: 19px;
+            padding: 25px 21px;
+            background: #f6f6f6;
+            p{
+              margin: 0 0 19px;
+              &:last-child{
+                margin: 0;
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+}
+
+.styled-vacancy {
+  margin: 36px 0;
+  .panel{
+    //margin: 0 0 15px;
+    .panel-heading{
+      padding: 0 0 20px;
+      a{
+        font-size: 19px;
+        color: #383838;
+        text-decoration: none;
+        .count{
+          display: inline-block;
+          vertical-align: middle;
+          height: 20px;
+          width: 20px;
+          border-radius: 20px;
+          background: #75cc5e;
+          line-height: 20px;
+          text-align: center;
+          color: #fff;
+          font-size: 12px;
+          margin: 0 13px 0 3px;
+        }
+        i{
+          font-size: 16px;
+
+        }
+
+      }
+    }
+  }
+}
+
+.styled-delivery{
+  .panel{
+    border-top:1px dotted #3c3c3c;
+
+    @media @max767 {
+      margin: 0 -15px;
+    }
+
+    .panel-heading{
+      height: 48px;
+      line-height: 48px;
+      white-space: nowrap;
+
+      @media @mobile {
+        height: auto;
+        line-height: normal;
+      }
+
+      .panel__clear {
+        display: none;
+        clear: both;
+
+        @media @max1279 {
+          display: block;
+        }
+      }
+
+      a{
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        padding: 0 12px;
+        color: #3c3c3c;
+        transition: background 0.2s ease;
+
+        @media @max1279 {
+          padding: 5px 12px;
+        }
+        @media @mobile {
+          padding: 5px 15px;
+        }
+
+        &:hover{
+          background: rgba(0,0,0,0.02);
+        }
+
+        i{
+          position: absolute;
+          right: 20px;
+          top: 17px;
+          font-size: 15px;
+
+          @media @max1023 {
+            display: none !important;
+          }
+        }
+
+        * {
+
+          @media @max1279 {
+            width: auto;
+            margin-right: 15px;
+            line-height: normal;
+          }
+        }
+      }
+    }
+    .panel-body{
+      border-top:1px dotted #3c3c3c;
+      box-shadow: inset 0px 61px 65px -32px rgba(0,0,0,0.05);
+      padding: 23px 16px 18px;
+
+
+      p{
+        margin: 0 0 33px;
+        b{
+
+        }
+        &:last-child{
+          margin: 0;
+        }
+      }
+    }
+    &:last-child{
+      border-bottom:1px dotted #3c3c3c;
+      .panel-heading{
+
+      }
+    }
+  }
+}

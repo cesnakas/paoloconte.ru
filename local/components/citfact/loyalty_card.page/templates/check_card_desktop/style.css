@@ -1,0 +1,136 @@
+.loyalty_card_wrapper {
+    margin-top: 40px;
+    font-size: 15px;
+}
+.loyalty_card_img_wrapper {
+    display: inline-block;
+    width: 25%;
+    margin-right: 5%;
+}
+.loyalty_card_img_wrapper > img {
+    width: 100%;
+}
+.loyalty_card_form_wrapper {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 40px;
+    width: 69%;
+}
+.loyalty_card_change {
+    color: #bcbcbc;
+    border-bottom: 1px dashed #bcbcbc;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.loyalty_card_change:hover {
+    color: #e4b461;
+    border-bottom: 1px dashed #e4b461;
+    cursor: pointer;
+}
+.loyalty_card_discount {
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.loyalty_card_submit_button {
+    background-color: #75cc5e;
+    color: white;
+    height: 38px;
+    width: 192px;
+    margin-left: 30px;
+}
+.dotted_line {
+    width: 100%;
+    height: 1px;
+    background: url(/images/dotted.png);
+    margin: 30px 0;
+}
+.loyalty_card_info > a {
+    margin-left: 10px;
+}
+.loyalty_card_last_update {
+    margin-top: 40px;
+    color: #bcbcbc;
+}
+#loyalty_card_barcode_input_wrapper > input {
+    display: inline-block;
+    width: 200px;
+}
+#captcha_input_wrapper, .loyalty_card_barcode_input_wrapper {
+    position: relative;
+    display: inline-block;
+}
+#captcha_input_wrapper > input {
+    width: 250px;
+    height: 40px;
+}
+.loyalty_card_error, .captcha_error {
+    display: none;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    color: #f94d41;
+    line-height: 30px;
+    height: 30px;
+    padding: 0 12px;
+    font-size: 14px;
+    border-radius: 3px;
+    font-weight: 300;
+    width: auto;
+    white-space: nowrap;
+    background: #fff;
+    box-shadow: 0 0 28px 0 rgba(0, 0, 0, 0.2);
+}
+
+.loyalty_card_error:after, .captcha_error:after {
+    content: "";
+    display: block !important;
+    border-right: solid 6px transparent;
+    border-top: solid 10px #fff;
+    border-left: solid 6px transparent;
+    position: absolute;
+    top: 100%;
+    left: 12%;
+    z-index: 10;
+}
+.card_info_text {
+    margin-bottom: 20px;
+    font-size: 14px;
+    position: relative;
+}
+#back_card {
+    display: none;
+    position: absolute;
+    top: -116px;
+    left: 0;
+    height: 109px;
+    border-radius: 3px;
+    width: auto;
+    white-space: nowrap;
+    background: #fff;
+    box-shadow: 0 0 28px 0 rgba(0, 0, 0, 0.2);
+    padding: 2px 2px 2px 2px;
+}
+#back_card:after {
+    content: "";
+    display: block !important;
+    border-right: solid 6px transparent;
+    border-top: solid 10px #fff;
+    border-left: solid 6px transparent;
+    position: absolute;
+    top: 100%;
+    left: 12%;
+    z-index: 10;
+}
+#back_card img {
+    width: 200px;
+}
+.card_info_text:hover #back_card {
+    display: block;
+}
+.captcha_wrapper {
+    margin-top: 30px;
+}
+.captcha_wrapper > img {
+    vertical-align: top;
+}

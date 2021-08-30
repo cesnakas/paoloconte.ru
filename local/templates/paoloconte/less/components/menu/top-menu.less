@@ -1,0 +1,135 @@
+.top-menu {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+
+  &__item {
+    position: relative;
+    margin: 0 10px;
+
+    @media (max-width: 1200px) {
+      position: static;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 0;
+      background-color: #000000;
+
+      @media (max-width: 1200px) {
+        content: none;
+      }
+    }
+
+    &.active {
+
+      &:after {
+        height: 1px;
+      }
+    }
+
+    a{
+      color: #000000;
+      &:hover {
+        color: #000000;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 0;
+    line-height: 17px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  &__dropdown {
+    display: none;
+    min-width: 556px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    box-shadow: 0 10px 40px rgba(25, 24, 24, 0.1);
+
+    @media (max-width: 1730px) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__items {
+    display: flex;
+    padding: 35px 40px;
+    justify-content: space-between;
+    background-color: #fff;
+
+    @media @max1400 {
+      padding: 30px;
+    }
+  }
+
+  &__inner {
+    //display: inline-block;
+    min-width: 160px;
+    //width: 48%;
+    vertical-align: top;
+
+    &:not(:last-of-type) {
+      padding-right: 60px;
+    }
+
+    &--img {
+      min-width: 220px;
+      max-width: 270px;
+
+      a {
+        display: block;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &.double{
+      margin-right: 60px;
+    }
+
+    li {
+      margin-bottom: 10px;
+
+      a {
+        color: #AAAAAA;
+
+        &:hover {
+          color: #666666;
+        }
+      }
+    }
+  }
+
+  &__content{
+    display: flex;
+
+    ul:not(:last-of-type) {
+      margin-right: 60px;
+    }
+
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+  }
+}

@@ -1,0 +1,148 @@
+.page-top {
+  margin-bottom: 50px;
+  background-color: rgba(242, 242, 242, .5);
+
+  @media @max1279 {
+    margin-bottom: 30px;
+  }
+  @media @max767 {
+    display: none;
+  }
+
+  &--catalog {
+
+    @media @max767 {
+      display: block;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-filter {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+
+    &__inner {
+      display: flex;
+      align-items: center;
+      padding-right: 15px;
+      cursor: pointer;
+
+      &:hover {
+
+        .plus:before,
+        .plus:after {
+          background-color: #191818;
+        }
+      }
+
+      &.active {
+
+        .plus {
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    span {
+      display: block;
+      width: 20px;
+      margin-left: 6px;
+      border-radius: 50%;
+      background-color: #191818;
+      text-align: center;
+      font-size: 11px;
+      line-height: 20px;
+      color: #fff;
+    }
+  }
+
+
+  &-sort {
+    display: flex;
+    width: 100%;
+    align-self: stretch;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+
+    &__inner {
+      display: inline-flex;
+    }
+
+    &__items {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      padding: 18px 0;
+      background-color: #fff;
+      box-shadow: 0 10px 40px rgba(25, 24, 24, 0.1);
+      z-index: 9;
+
+      a {
+        display: block;
+        padding: 5px 27px 5px 20px;
+        text-align: left;
+        text-transform: lowercase;
+        white-space: nowrap;
+        transition: .2s;
+
+        &.active,
+        &:hover {
+          background-color: #333333;
+          color: #fff;
+        }
+      }
+    }
+
+    &__top {
+      display: flex;
+      cursor: pointer;
+
+      &.active {
+
+        .page-top-sort__text:after {
+          margin-bottom: 0;
+          border-width: 1px 0 0 1px;
+        }
+      }
+    }
+
+    &__title {
+      color: #999999;
+    }
+
+    &__text {
+      padding-left: 12px;
+      @media @mobile {
+        display: none;
+      }
+    }
+
+    &__arrow {
+      margin-left: 9px;
+
+      &.active:after {
+        margin-bottom:  -2px;
+        border-width: 1px 0 0 1px;
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        margin-bottom: 3px;
+        padding: 3px;
+        border: solid #191818;
+        border-width: 0 1px 1px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

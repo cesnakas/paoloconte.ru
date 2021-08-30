@@ -1,0 +1,94 @@
+.order-block {
+  margin-bottom: 50px;
+
+  &__inner {
+    display: flex;
+
+    @media @max1023 {
+      flex-direction: column;
+    }
+  }
+
+  &__main {
+    width: calc(~'100% - 265px - 100px');
+
+    @media @max1023 {
+      width: 100%;
+      margin-bottom: 30px;
+      padding-right: 60px;
+    }
+    @media @max767 {
+      padding-right: 0;
+    }
+    .personal-box {
+      .form__item {
+        select {
+          width: 100%;
+        }
+      }
+      .select2-container .select2-choice .select2-arrow b {
+        display: inline-block;
+        margin-top: -3px;
+        margin-right: 11px;
+        padding: 3px;
+        border: solid #aaa;
+        border-width: 0 1px 1px 0;
+      }
+      .select2-results .select2-result-label {
+        font-size: 14px;
+      }
+      .bx-sls .dropdown-item-text > div {
+        display: flex;
+        flex-direction: column;
+        .city {
+          font-size: 12px;
+          line-height: 17px;
+        }
+        .path {
+          font-size: 10px;
+          line-height: 10px;
+          color: #5A5A5A;
+        }
+      }
+      .dropdown-block {
+        padding: 0 22px 0 13px;
+      }
+    }
+  }
+
+  &__sidebar {
+    width: 265px;
+    margin-left: 100px;
+
+    @media @max1023 {
+      width: 100%;
+      max-width: 443px;
+      margin: 0 auto;
+    }
+
+    &.active {
+      display: flex!important;
+      align-items: flex-end;
+      flex-wrap: wrap;
+
+      & > div.scroll {
+        position: static;
+      }
+    }
+
+    .basket-bottom {
+      width: 265px;
+      padding: 20px 20px 15px;
+      background-color: #fff;
+
+      @media @max1023 {
+        width: 100%;
+      }
+
+      &.scroll {
+        position: fixed;
+        top: 0;
+      }
+    }
+  }
+}

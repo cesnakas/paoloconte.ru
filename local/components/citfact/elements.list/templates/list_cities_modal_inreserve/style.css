@@ -1,0 +1,19 @@
+.cityModal .city-box-1 .input-cell #cities-autocomplete-cont-inresereve {
+    position: absolute;
+    background: #FFF;
+}
+.cityModal .city-box-1 .input-cell #cities-autocomplete-cont-inresereve ul.ui-autocomplete {
+    max-height: 300px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+    box-shadow: #777 5px 5px 15px;
+}
+.cityModal .city-box-1 .input-cell #cities-autocomplete-cont-inresereve ul.ui-autocomplete li {
+    padding: 5px 10px;
+}
+.cityModal .city-box-1 .input-cell #cities-autocomplete-cont-inresereve ul.ui-autocomplete li.ui-state-focus {
+    background: #E4B461;
+    color: #FFF;
+    cursor: pointer;
+}

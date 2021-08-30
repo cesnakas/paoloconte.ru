@@ -1,0 +1,175 @@
+.product-item-small-card {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.product-item-container {
+
+  text-align: center;
+  font-size: 14px;
+
+  .product-item {
+    border: 0 !important;
+    padding-bottom: 12px !important;
+  }
+
+  .tag {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 15;
+  }
+
+  .product-item-title {
+    padding: 0 21px;
+    white-space: normal;
+  }
+
+  .bx-no-touch .product-item-scu-item-text-block {
+    outline: 0;
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #191818;
+    font-size: 14px;
+    padding: 0;
+  }
+
+  .product-item-scu-item-text-block {
+    padding: 0;
+    outline: 0;
+
+    .product-item-scu-item-text {
+      font-weight: 500;
+      font-size: 14px;
+      width: 36px;
+      line-height: 34px;
+      border: 0;
+      cursor: pointer;
+      padding: 0;
+    }
+  }
+
+  .product-item-scu-item-text-container {
+    padding: 5px 0;
+  }
+
+  .product-item-scu-item-text-container.selected {
+    .product-item-scu-item-text {
+      font-weight: 500;
+      border: 1px solid #191818;
+    }
+
+    .product-item-scu-item-text-block {
+      outline-width: 1px;
+    }
+  }
+
+  .product-item-scu-container .product-item-scu-block-title {
+    margin-bottom: 10px;
+    color: #191818;
+    font-size: 14px;
+  }
+
+  .product-item-title a {
+    display: block;
+    margin-bottom: 9px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    line-height: 23px;
+  }
+
+  .product-item-price-old {
+    text-decoration: line-through;
+    margin: 0 5px;
+    color: #999;
+    position: relative;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  .product-item-price-current {
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+  .product-item-button-container .btn {
+    width: 49%;
+    padding: 13px 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    background-color: #191818;
+  }
+
+  .product-item-button-container .btn:hover {
+    background-color: #fff;
+    color: #191818;
+    border-color: #191818;
+  }
+
+  .product-item-price-current:after, .product-item-price-old:after {
+    font-family: 'PT Sans Rub';
+    content: '\00a0\20cc';
+  }
+
+  .c-g-item-discount {
+    display: inline-block;
+  }
+
+  .product-item-price-container {
+    min-height: 30px;
+  }
+}
+
+.popup-window-buttons {
+  .btn {
+    color: #191818;
+    border-color: #191818;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 13px 20px;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: .05em;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    white-space: nowrap;
+    -webkit-transition: .3s ease-in;
+    transition: .3s ease-in;
+    background: white;
+  }
+
+  .btn:hover {
+    background-color: #191818;
+    color: #fff;
+  }
+}
+
+.popup-window-titlebar-text {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 30px 0 10px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: 'Geometria', Arial;
+  font-size: 24px;
+  letter-spacing: normal;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 15px;
+  color: #000;
+}

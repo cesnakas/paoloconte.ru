@@ -1,0 +1,27 @@
+.breadcrumb {
+  margin: 0 auto;
+  white-space: nowrap;
+
+  @media @max767 {
+    display: none;
+  }
+
+  &__item {
+    margin-right: 15px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  * {
+    color: #999999;
+  }
+
+  a {
+
+    &:hover * {
+      color: #191818 !important;
+    }
+  }
+}

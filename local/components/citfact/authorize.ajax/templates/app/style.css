@@ -1,0 +1,12 @@
+.line input.error{
+    border: 1px solid !important;
+    border-color: #F94D41 !important;
+}
+
+.errors_cont p{
+    display: inline-block;
+    background: #f94d41;
+    margin: 9px 0 7px;
+    padding: 3px 14px;
+    color: #fff;
+}

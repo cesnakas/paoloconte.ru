@@ -1,0 +1,6 @@
+#citfact_form_ajax_review input.error,
+#citfact_form_ajax_review textarea.error
+{
+    border: 1px solid !important;
+    border-color: #F94D41 !important;
+}

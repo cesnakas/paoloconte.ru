@@ -1,0 +1,255 @@
+//
+// Modals
+// --------------------------------------------------
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+// Kill the scroll on the body
+.modal-open {
+  overflow: hidden;
+}
+
+// Container that the modal scrolls within
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: @zindex-modal;
+  -webkit-overflow-scrolling: touch;
+  font-size: 14px;
+
+  // Prevent Chrome on Windows from adding a focus outline. For details, see
+  // https://github.com/twbs/bootstrap/pull/10951.
+  outline: 0;
+
+  // When fading in the modal, animate it to slide down
+  &.fade .modal-dialog {
+    .translate3d(0, -25%, 0);
+    .transition-transform(~"0.3s ease-out");
+  }
+  &.in .modal-dialog { .translate3d(0, 0, 0) }
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+.close{
+  position: absolute;
+  top: 21px;
+  right: 16px;
+  width:20px;
+  height: 20px;
+  border:none;
+  color: #828282;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCMDJGMEMyNUE2MUYxMUU0QjM1M0UzMUIwNDQ0QzJGNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCMDJGMEMyNkE2MUYxMUU0QjM1M0UzMUIwNDQ0QzJGNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkIwMkYwQzIzQTYxRjExRTRCMzUzRTMxQjA0NDRDMkY2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkIwMkYwQzI0QTYxRjExRTRCMzUzRTMxQjA0NDRDMkY2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Ab+U6gAAAGFJREFUeNpiYKAhkKOmXgUgfg3EdmQYZgfVq4hLwo4Mw+wJKbCjhmGkGEq0YcQYSrJh+Awl2zBshlJsGLqhRBnGxEBnQFUvUzVSqJpsqJqwqZr1qFo40KT4omoBSzUAEGAA9tcpqAVm8pIAAAAASUVORK5CYII=');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+
+  &:hover{
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+.close-small{
+  opacity: 0.26;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0Nzc2N0FCNkFBQkUxMUU0OTMwQkUxNDRCRTg0MjVGNCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0Nzc2N0FCN0FBQkUxMUU0OTMwQkUxNDRCRTg0MjVGNCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ3NzY3QUI0QUFCRTExRTQ5MzBCRTE0NEJFODQyNUY0IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjQ3NzY3QUI1QUFCRTExRTQ5MzBCRTE0NEJFODQyNUY0Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+c55pzgAAAElJREFUeNpiYBgMYA4QyxBQA5KfjUtiGx4DQOJb8VmAywCCGnEpJFojugEWpGqEAZDG31CaJEC2zWT7mezQpiieKUph9AUAAQYAEZkTHoMYKxwAAAAASUVORK5CYII=');
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  &:hover{
+    opacity: 0.52;
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+
+// Shell div to position the modal with bottom padding
+.modal-dialog {
+  position: relative;
+  margin: 20px auto 0;
+  width: 300px;
+  top:0;
+  -webkit-box-shadow: 0px 31px 71px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow:    0px 31px 71px 0px rgba(0, 0, 0, 0.39);
+  box-shadow:         0px 31px 71px 0px rgba(0, 0, 0, 0.39);
+  /*-webkit-transition: transform 0.3s ease-out, top 0.03s linear !important;
+  -moz-transition: transform 0.3s ease-out, top 0.03s linear !important;
+  -ms-transition: transform 0.3s ease-out, top 0.03s linear !important;
+  -o-transition: transform 0.3s ease-out, top 0.03s linear !important;
+  transition: transform 0.3s ease-out, top 0.03s linear !important;*/
+
+
+
+
+  .item{
+    padding-bottom: 1px;
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+
+
+    .btn-box{
+
+    }
+
+
+
+  .desc{
+    font-size: 12px;
+    color: #b3b2b2;
+    padding-bottom: 2px;
+  }
+
+
+
+
+}
+
+// Actual modal
+.modal-content {
+  position: relative;
+  background-color: #fff;
+
+  background-clip: padding-box;
+  // Remove focus outline from opened modal
+  outline: 0;
+}
+
+.line{
+  margin-bottom: 15px;
+  &:last-of-type{
+    margin-bottom: 0 !important;
+  }
+}
+
+// Modal background
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: @zindex-modal-background;
+  background-color: #fff;
+  // Fade for backdrop
+  &.fade { .opacity(0); }
+  &.in { .opacity(0.75); }
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+  padding: 25px 21px 20px;
+  min-height: (@modal-title-padding + @modal-title-line-height);
+}
+
+
+// Title text within header
+.modal-title {
+  margin: 0;
+  font-size: 22px;
+  margin-bottom: 25px;
+
+}
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body {
+  position: relative;
+  padding: 16px 24px 16px;
+}
+
+// Footer (for actions)
+.modal-footer {
+  padding: 13px 109px 40px;
+  text-align: right; // right align buttons
+  &:extend(.clearfix all); // clear it in case folks use .pull-* classes on buttons
+
+  // Properly space out buttons
+  .btn + .btn {
+    margin-left: 5px;
+    margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+  }
+  // but override that for button groups
+  .btn-group .btn + .btn {
+    margin-left: -1px;
+  }
+  // and override it for block buttons as well
+  .btn-block + .btn-block {
+    margin-left: 0;
+  }
+}
+
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+#chooseSizeModal {
+  margin-top: 10%;
+}
+/*
+
+// Scale up the modal
+@media (min-width: @screen-sm-min) {
+  // Automatically set modal's width for larger viewports
+  .modal-dialog {
+    width: @modal-md;
+    margin: 30px auto;
+  }
+  .modal-content {
+    .box-shadow(0 5px 15px rgba(0,0,0,.5));
+  }
+
+  // Modal sizes
+  .modal-sm { width: @modal-sm; }
+}
+
+@media (min-width: @screen-md-min) {
+  .modal-lg { width: @modal-lg; }
+}
+*/

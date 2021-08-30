@@ -1,0 +1,57 @@
+#citfact_form_ajax_review input.error,
+#citfact_form_ajax_review textarea.error
+{
+    border: 1px solid !important;
+    border-color: #F94D41 !important;
+}
+
+form input.error,
+form textarea.error
+{
+    border: 1px solid !important;
+    border-color: #F94D41 !important;
+}
+.line_relative {
+    position: relative;
+}
+.float-right.link{
+    margin-top: 10px;
+}
+.review-form .ready_props {
+    margin-bottom: 23px;
+}
+.show_error, .show_length {
+    text-align: right;
+    display: none;
+    position: absolute;
+    top: -18px;
+    opacity: 0.7;
+    font-size: 12px;
+    line-height: 11px;
+    right: 0;
+}
+.show_error {
+    top: -26px;
+}
+.show_length > * {
+    display: inline;
+}
+
+.error_mes .show_error {
+    display: block;
+}
+
+.ready_props img {
+    max-height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 50px;
+}
+
+.ready_props div {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 155px;
+    font-size: 13px;
+    line-height: 13px;
+}

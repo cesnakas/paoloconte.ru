@@ -1,0 +1,9 @@
+form input.error,
+form textarea.error
+{
+    border: 1px solid !important;
+    border-color: #F94D41 !important;
+}
+.float-right.link{
+    margin-top: 10px;
+}

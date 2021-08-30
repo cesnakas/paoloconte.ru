@@ -1,0 +1,27 @@
+/* скрываем оригинальный виджет - чтобы не было два ярлыка на экране*/
+#jivo_chat_widget {
+    /*display: none;*/
+}
+
+/* стиль по умолчанию - для оффлайн сообщений, если никого нет в онлайне */
+#jivo_custom_widget {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    z-index: 300000;
+    cursor: pointer;
+    line-height: 48px;
+    height: 50px;
+	background-image: url(images/jivo_widget_online.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #d60000;
+    border-radius: 30px;
+}
+
+/* если есть операторы в онлайне - показываем другой ярлык*/
+#jivo_custom_widget.jivo_online {
+    background-image: url(images/jivo_widget_online.png);
+}

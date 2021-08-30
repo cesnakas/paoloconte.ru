@@ -1,0 +1,328 @@
+.basket-params {
+  display: flex;
+  margin-bottom: 20px;
+
+  @media @max767 {
+    flex-direction: column;
+  }
+
+  &__inner {
+    width: calc(~'100% - 125px');
+
+    @media @max767 {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    width: 150px;
+    margin-top: 0;
+    padding-right: 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #000;
+    text-transform: initial;
+
+    @media @max767 {
+      width: 100%;
+      padding-right: 0;
+      margin: 0 0 13px;
+      font-size: 12px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    .select-item {
+      top: 0;
+      left: 0;
+      margin-right: 0;
+      position: absolute;
+    }
+    .basket__title {
+      display: inline-block;
+      margin-bottom: 0;
+      font-weight: 400;
+      font-size: 12px;
+      padding: 0 30px 15px;
+      color: #000;
+      text-transform: initial;
+
+      @media @mobile {
+        margin-bottom: 0;
+      }
+    }
+    .select2-container .select2-choice .select2-arrow b {
+      display: inline-block;
+      margin-top: -3px;
+      margin-right: 11px;
+      padding: 3px;
+      border: solid #aaa;
+      border-width: 0 1px 1px 0;
+    }
+    .basket-params__text {
+      .bx_result_price {
+        .btn {
+          flex-wrap: wrap;
+          br {
+            display: none;
+          }
+        }
+      }
+      #s2id_delivery_store {
+        .select2-chosen {
+          font-weight: 500;
+        }
+      }
+    }
+    input {
+      &:checked ~ .basket-params__label .basket__title{
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__border {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid #666666;
+    pointer-events: none;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 30px;
+    left: 38px;
+
+    @media @max1023 {
+      top: 20px;
+      left: 12px;
+    }
+    @media @max767 {
+      display: none;
+    }
+
+    svg {
+      width: 24px;
+      height: 18px;
+
+      @media @max1023 {
+        width: 20px;
+      }
+
+      * {
+        fill: #666666;
+      }
+    }
+  }
+
+  &__text {
+    display: block;
+    max-width: 440px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    font-size: 12px !important;
+    @media @max767 {
+      padding-bottom: 14px;
+    }
+
+    &,
+    * {
+      color: #000!important;
+    }
+    & .btn--transparent{
+      text-transform: none;
+      & b {
+        font-weight: 500;
+      }
+    }
+    #shd_pvz_pick button {
+      border: 1px solid #191818;
+      text-transform: none;
+      font-size: 14px;
+      font-weight: 400;
+      background: transparent;
+      padding: 7px 18px;
+      color: #191818;
+      line-height: 1;
+      letter-spacing: .05em;
+      cursor: pointer;
+      transition: .3s ease-in;
+      @media @max767 {
+        width: 100%;
+      }
+      &:hover {
+        border-color: #191818;
+        background-color: #191818;
+        color: white !important;
+      }
+    }
+
+    .sdek_pvzAddr {
+      display: flex;
+      width: 100%;
+      max-width: 280px;
+      margin-top: 19px;
+      margin-bottom: 5px;
+      padding: 10px 25px;
+      background-color: #fff;
+      font-weight: 500;
+      border: 1px solid black;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      @media @max600 {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        padding: 10px 20px;
+        text-align: center;
+      }
+    }
+
+    p {
+      font-size: 12px;
+    }
+
+    .form__item {
+      margin-top: 15px;
+      margin-bottom: 0;
+      input {
+        max-width: 100%;
+      }
+    }
+
+    .footer__pay {
+      margin-bottom: 20px;
+    }
+
+    .safe-payment-descr {
+      padding: 0;
+      border: 1px solid transparent;
+    }
+    & .btn {
+      margin-bottom: 0 !important;
+    }
+    .select2-container {
+      width: 100%;
+      .select2-choice {
+        width: calc(~'100% - 1px');
+        padding: 8px 13px;
+
+        @media @max1023 {
+          width: 100%;
+        }
+
+      }
+      .select2-chosen {
+        font-size: 14px;
+        line-height: 17px;
+      }
+      &.select2-container-active.select2-dropdown-open {
+        .select2-arrow {
+          transform: rotate(180deg);
+          right: 20px;
+        }
+      }
+    }
+    #choose_pickup {
+      margin-top: 5px;
+      display: inline-block;
+      margin-bottom: 10px;
+      .sdek_pvzLair {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .basket-params__border {
+      border: 2px solid #27AE60;
+
+      & + .basket-params__icon svg * {
+        fill: #27AE60;
+      }
+    }
+    &:checked ~ * .basket__title{
+      color: #191818;
+    }
+    &:checked ~ * .basket-params__text *{
+      color: #191818!important;
+    }
+    &:checked ~ * .btn--transparent{
+      border-color: #191818;
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .btn {
+    display: inline-flex;
+    min-height: 34px;
+    margin-bottom: 20px;
+    padding: 7px 18px;
+    color: #191818 !important;
+
+    & + .btn.btn--transparent {
+      @media @max767 {
+        margin-left: 0 !important;
+        margin-top: 0;
+      }
+    }
+  }
+  & .btn--transparent * {
+    margin-left: 3px;
+    transition: .3s ease-in;
+  }
+  //& .btn--transparent:hover,
+  //& .btn--transparent:hover * {
+  //  color: #fff !important;
+  //}
+
+  .link {
+    display: inline-block;
+    font-weight: 500;
+
+    &.link--underline {
+      position: relative;
+
+      &:hover {
+        &:after {
+          width: 0;
+          transition-property: width;
+        }
+      }
+
+      &:after {
+        content: '';
+        bottom: 3px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        transition-duration: .2s;
+      }
+    }
+
+    &.disabled {
+      margin-bottom: 20px;
+      pointer-events: none;
+    }
+  }
+}

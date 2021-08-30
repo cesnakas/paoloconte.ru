@@ -1,0 +1,1 @@
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?><?$this->setFrameMode(true);?><?$frame = $this->createFrame()->begin('');?><div class="link">	<?=$arResult["CURRENT"]["NAME"]?></div><?$frame->end();?>

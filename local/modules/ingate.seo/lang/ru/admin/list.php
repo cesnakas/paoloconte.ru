@@ -1,0 +1,26 @@
+<?php
+$MESS["INGATE_SEO_DOES_NOT_EXIST"] = "Запись не найдена";
+$MESS["INGATE_SEO_TIMESTAMP_X"] = "Дата обновления";
+$MESS["INGATE_SEO_DATE_CREATE"] = "Дата создания";
+$MESS["INGATE_SEO_SELECT"] = "Выбрать";
+$MESS["INGATE_SEO_EDIT"] = "Изменить";
+$MESS["INGATE_SEO_REMOVE"] = "Удалить";
+$MESS["INGATE_SEO_CONFIRM"] = "Вы уверены, что хотите удалить элемент?";
+$MESS["INGATE_SEO_SORT_URL"] = "Url";
+$MESS["INGATE_SEO_SORT_TITLE"] = "Title";
+$MESS["INGATE_SEO_SORT_DESCRIPTION"] = "Description";
+$MESS["INGATE_SEO_SORT_KEYWORDS"] = "Keywords";
+$MESS["INGATE_SEO_SORT_ROBOTS"] = "Robots";
+$MESS["INGATE_SEO_SORT_H1"] = "H1";
+$MESS["INGATE_SEO_FILTER_ACTIVE"] = "Активность";
+$MESS["INGATE_SEO_FILTER_URL"] = "URL адрес страницы";
+$MESS["INGATE_SEO_FILTER_TITLE"] = "Заголовок окна браузера (title)";
+$MESS["INGATE_SEO_FILTER_DESCRIPTION"] = "Описание (description)";
+$MESS["INGATE_SEO_FILTER_KEYWORDS"] = "Ключевые слова (keywords)";
+$MESS["INGATE_SEO_FILTER_H1"] = "Заголовок страницы (h1)";
+$MESS["INGATE_SEO_FILTER_SITE_ID"] = "Сайт";
+$MESS["INGATE_SEO_FILTER_ROBOTS"] = "robots";
+$MESS["INGATE_SEO_TITLE"] = "Список элементов";
+$MESS["INGATE_SEO_IMPORT"] = "Импорт CSV";
+$MESS["INGATE_SEO_EXPORT"] = "Экспорт CSV";
+$MESS["INGATE_SEO_PAGES"] = "Элементы";

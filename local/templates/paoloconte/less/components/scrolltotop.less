@@ -1,0 +1,36 @@
+#toTop {
+  display: none !important;
+  width: 40px;
+  height: 40px;
+  background: rgba(25, 24, 24, .07);
+  position: fixed;
+  line-height: 48px;
+  right: 200px;
+  //right: 20px;
+  bottom: 90px;
+  -webkit-backface-visibility: hidden !important;
+  -webkit-transform: translateZ(o) !important;
+  z-index: 11;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  @media @max1400 {
+    right: 30px;
+  }
+
+  &:hover{
+    background: rgba(25, 24, 24, .14);
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    padding: 4px;
+    border: solid #AAAAAA;
+    border-width: 1px 0 0 1px;
+    transform: rotate(45deg);
+  }
+}

@@ -1,0 +1,26 @@
+<?php
+$MESS["INGATE_SEO_DOES_NOT_EXIST"] = "Entry not found";
+$MESS["INGATE_SEO_TIMESTAMP_X"] = "Update date";
+$MESS["INGATE_SEO_DATE_CREATE"] = "Creation date";
+$MESS["INGATE_SEO_SELECT"] = "Select";
+$MESS["INGATE_SEO_EDIT"] = "Edit";
+$MESS["INGATE_SEO_REMOVE"] = "Delete";
+$MESS["INGATE_SEO_CONFIRM"] = "Are you sure you want to delete the item?";
+$MESS["INGATE_SEO_SORT_URL"] = "Url";
+$MESS["INGATE_SEO_SORT_TITLE"] = "Name";
+$MESS["INGATE_SEO_SORT_DESCRIPTION"] = "Description";
+$MESS["INGATE_SEO_SORT_KEYWORDS"] = "Keywords";
+$MESS["INGATE_SEO_SORT_ROBOTS"] = "Robots";
+$MESS["INGATE_SEO_SORT_H1"] = "H1";
+$MESS["INGATE_SEO_FILTER_ACTIVE"] = "Active";
+$MESS["INGATE_SEO_FILTER_URL"] = "URL of the page";
+$MESS["INGATE_SEO_FILTER_TITLE"] = "The title of the browser window (title)";
+$MESS["INGATE_SEO_FILTER_DESCRIPTION"] = "Description (description)";
+$MESS["INGATE_SEO_FILTER_KEYWORDS"] = "Keywords (keywords)";
+$MESS["INGATE_SEO_FILTER_H1"] = "Page title (h1)";
+$MESS["INGATE_SEO_FILTER_SITE_ID"] = "Site";
+$MESS["INGATE_SEO_FILTER_ROBOTS"] = "robots";
+$MESS["INGATE_SEO_TITLE"] = "List of items";
+$MESS["INGATE_SEO_IMPORT"] = "Import CSV";
+$MESS["INGATE_SEO_EXPORT"] = "Export CSV";
+$MESS["INGATE_SEO_PAGES"] = "Elements";

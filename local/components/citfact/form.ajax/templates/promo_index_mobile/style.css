@@ -1,0 +1,8 @@
+#citfact_form_subscribe_footer input.error,
+#citfact_form_subscribe_footer textarea.error
+{
+    border: 1px solid !important;
+    border-color: #F94D41 !important;
+}
+
+#subscribe_footer_submit{width:140px;}

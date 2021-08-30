@@ -1,0 +1,225 @@
+.reserve-choose-wrap {
+    margin: 20px 0;
+    color: #333333;
+}
+.reserve-choose-wrap .city-select a {
+    color: darkgray;
+    text-decoration: none;
+    border-bottom: 1px dashed darkgray;
+}
+.reserve-choose-wrap .city-select span {
+    font-weight: bold;
+    margin-right: 15px;
+}
+.reserve-choose-wrap .tooltip {
+    padding-top: 10px;
+    margin-bottom: 30px;
+}
+.shop-store-wrap .shop-store {
+    height: 60px;
+}
+body .shop-store-wrap .shop-store .shop-cell {
+    padding-bottom: 0;
+    width: calc(50% - 20px);
+    margin-right: 20px;
+}
+.detail-wrap .shop-store-wrap .shop-store .shop-name {
+    display: inline;
+}
+.shop-store-wrap .shop-store .size-box {
+    padding: 0 30px 0 0px;
+    display: flex !important;
+}
+.shop-store-wrap .shop-store .size-box.no-padding {
+    padding: 0;
+}
+.shop-store-wrap .shop-store .size-box .size {
+    font-size: 14px;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 2px;
+}
+.shop-store-wrap .shop-store .size-box .size:last-child {
+    margin: 0;
+}
+.shop-store-wrap .shop-store .size-box .size.active, .shop-store-wrap .shop-store .size-box .size:hover {
+    border:1px solid #191818;
+    font-weight: 500;
+}
+.shop-store-wrap .shop-store .size-box .size.without-size {
+    background: #e8e8e8;
+    color: #e4b461;
+    display: block;
+}
+.shop-store-wrap .shop-store .size-box .size.without-size .fa {
+    line-height: 27px;
+}
+.shop-store-wrap .shop-store .size-box .size.without-size:hover, .shop-store-wrap .shop-store .size-box .size.without-size.active {
+    background: #e4b461;
+    color: #fff;
+}
+.shop-store-wrap .shop-store .choose-shop {
+    cursor: pointer;
+}
+.shop-store-wrap .shop-store .choose-shop span:hover {
+    border-bottom: 1px dashed #5b5a5a;
+}
+#form_reserve_submit {
+    margin-top: 20px;
+    padding: 10px;
+}
+.shop-store-wrap .shop-store .btn-reserve, #form_reserve_submit {
+    color:darkgrey;
+    font-size: 14px;
+    background-color: #e8e8e8;
+    height: 100%;
+    min-height: 36px;
+    line-height: 1.5;
+    text-align: center;
+    max-height: 41px;
+    min-width: 197px;
+    max-width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shop-store-wrap .shop-store .btn-reserve.active,  #form_reserve_submit {
+    background-color: #191818;
+    color: #fff;
+}
+.shop-store-wrap .shop-store .btn-reserve.btn.mode1:before {
+    top: 5px;
+}
+
+#resultModalInReserve .modal-dialog, #reserveForm .modal-dialog {
+    /*margin: 265px auto 50px;*/
+}
+#resultModalInReserve .title {
+    display: none;
+}
+#resultModalInReserve ul {
+    margin-top: 5px;
+}
+#reserveForm .modal-title-form {
+    padding-top: 20px;
+    margin-bottom: 11px;
+    padding-right: 0;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-family: 'Playfair Display','Open Sans',Arial;
+    font-size: 24px;
+}
+#reserveForm .fast-order-wrap .image {
+    vertical-align: middle !important;
+}
+#reserveForm .modal-title-desc-form .emulate-row .emulate-cell {
+    min-width: 65px;
+    line-height: 27px;
+    font-size: 15px;
+}
+#reserve .modal-body {
+    padding: 60px 60px 85px;
+}
+#reserve .modal-body .message {
+    color: darkgray;
+    margin-top: 25px;
+}
+#reserve .modal-body .shop-store-wrap {
+    display: flex;
+    flex-direction: column;
+}
+#reserve .modal-body .shop-store-wrap .shop-store {
+    border-top: 1px solid #DEDEDE;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+}
+#reserve .modal-body .shop-store-wrap .shop-store:last-child{
+    border-bottom: 1px solid #DEDEDE;
+}
+.reserve.no-shops-msg {
+    color: #393536;
+    margin: 20px 0;
+}
+.reserve.no-shops-msg a{
+    color: #333333;
+    border-bottom: 1px solid;
+}
+.reserve.no-shops-msg a:hover {
+    border-bottom: 1px solid transparent;
+}
+.shop-name.get-modal {
+    font-size: 14px;
+    line-height: 23px; 
+    border-bottom: 1px solid #333333;
+    display: inline;
+}
+.shop-name.get-modal:hover {
+    border-bottom: 1px solid transparent;
+}
+#reserveForm #form_reserve .oferta {
+    margin-left: 0;
+    text-align: left;
+}
+@media(max-width:1024px){
+    .shop-store-wrap .shop-store {
+        height: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .shop-store-wrap .shop-store .size-box {
+        flex-wrap: wrap;
+        padding: 0 10px 0 0;
+    }
+}
+@media(max-width: 600px){
+    #reserve .modal-body .message {
+        margin-top: 15px;
+    }
+    #reserve .modal-body {
+        padding: 15px 15px 30px;
+    }
+    #reserve .modal-body .shop-store-wrap .shop-store {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        border-top: none;
+        border-bottom: none;
+
+    }
+    #reserve .emulate-cell {
+        width: 100%;
+    }
+
+    body .shop-store-wrap .shop-store .shop-cell {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .shop-store-wrap .shop-store .size-box {
+        margin-bottom: 15px;
+    }
+    #reserve .shop-store-wrap .shop-store .btn-reserve {
+        width: 100%;
+        max-width: 100%;
+    }
+    #reserve .modal-body .shop-store-wrap .shop-store:last-child {
+        border-bottom: none;
+    }
+    .title-1 {
+        margin-bottom: 20px;
+        padding: 0 20px;
+        text-align: center;
+    }
+    #form_reserve_submit {
+        width: 100%;
+        max-width: 100%;
+    }
+    #reserveForm .modal-title-form {
+        font-size: 20px;
+    }
+}

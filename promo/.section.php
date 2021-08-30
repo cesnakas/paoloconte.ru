@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Промо";
+$arDirProperties = Array(
+
+);
+?>

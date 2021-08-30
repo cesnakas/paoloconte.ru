@@ -1,0 +1,1 @@
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?><?$this->setFrameMode(true);?><?$frame = $this->createFrame()->begin('');?><?if($arResult["CURRENT"]['CODE'] == 'moscow'){	echo '<span style="white-space: nowrap">+7 (499) 350-7138</span>';}else{	echo '<span style="white-space: nowrap">+7 (800) 333 70 77</span>';}?><?$frame->end();?>

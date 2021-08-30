@@ -1,0 +1,128 @@
+.cityModal{
+
+    .your-city{
+      padding: 20px 30px 15px;
+      height: 70px;
+        .city{
+          display: inline-block;
+          font-size: 18px;
+          color: #383838;
+          margin-right: 22px;
+          vertical-align: middle;
+          span{
+            border-bottom: 1px dashed @dark-main;
+          }
+        }
+      .btn-box{
+        display: inline-block;
+        vertical-align: middle;
+        .btn{
+          height: 32px;
+          line-height: 32px;
+          padding: 0 12px;
+        }
+      }
+    }
+  .modal-body{
+      padding: 0;
+  }
+  .city-box-1{
+    /*background:#f9f9f9;*/
+    padding: 25px 15px 0px 15px;
+    .input-cell{
+      width: 386px;
+      padding-right: 22px;
+        input{
+          height: 35px;
+          line-height: 35px;
+        }
+        #cities-autocomplete-cont{
+          position: absolute;
+          background: #FFF;
+          ul.ui-autocomplete{
+            max-height: 300px;
+            overflow-y: auto;
+            /* prevent horizontal scrollbar */
+            overflow-x: hidden;
+            box-shadow: #777 5px 5px 15px;
+            li{
+              padding: 5px 10px;
+              &.ui-state-focus{
+                background:#E4B461;
+                color:#FFF;
+                cursor:pointer;
+              }
+            }
+          }
+        }
+    }
+    .text{
+
+    }
+  }
+  .word-box{
+    font-size: 0;
+    text-align: center;
+    background: #f6f6f6;
+    padding: 10px 10px 5px 10px;
+    a{
+      font-size: 16px;
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      border-radius: 25px;
+      text-transform: uppercase;
+      line-height: 25px;
+      text-align: center;
+      text-decoration: none;
+      margin: 0 0px;
+      &:hover,
+      &.active{
+        background-color: @main-color-1;
+        color: #fff;
+      }
+    }
+  }
+  .main-city{
+    padding: 10px 15px 5px 15px;
+    li{
+      float: left;
+      min-width: 130px;
+      display: inline-block;
+      a{
+        font-size: 17px;
+        line-height: 30px;
+        color: @main-color-1;
+        text-decoration: none;
+        border-bottom: 1px dashed @main-color-1;
+        &:hover{
+          border: none;
+        }
+      }
+    }
+  }
+  .city-list-wrap{
+    padding: 6px 15px 15px;
+    line-height: 20px;
+    .city-list{
+      overflow-y: auto;
+      height: 230px;
+      ul{
+        /*float: left;
+        width: 25%;*/
+        li{
+          border-bottom: 1px solid #f6f6f6;
+          padding: 5px 0 5px 0;
+          a{
+            font-size: 14px;
+            text-decoration: none;
+            &:hover,
+            &:active{
+              color: @main-color-1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

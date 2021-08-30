@@ -1,0 +1,4 @@
+#citfact_form_promo_index .errors_cont p,
+#citfact_form_promo_index .success_cont p{
+    width: 100%;
+}

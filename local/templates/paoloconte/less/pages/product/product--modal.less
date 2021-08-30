@@ -1,0 +1,77 @@
+/* fastview */
+.product--modal {
+  padding: 38px 33px 35px 45px;
+
+  @media @max1400 {
+    padding: 0;
+  }
+
+  .product {
+
+    &-slider {
+      width: 500px;
+      margin-top: 0;
+
+      &-big {
+
+        .swiper-slide {
+          height: 480px;
+        }
+      }
+
+      &-small {
+        margin-top: 50px;
+      }
+    }
+
+    &__inner {
+      margin-bottom: 0;
+    }
+
+    &-info {
+      width: 490px;
+      max-width: calc(~'100% - 490px - 20px');
+    }
+
+    &-price {
+      margin-top: 40px;
+
+      @media @max1400 {
+        margin-top: 20px;
+      }
+    }
+
+    &__color {
+
+      @media @max1400 {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-size {
+
+      @media @max1400 {
+        margin-bottom: 12px;
+      }
+    }
+
+    &-links {
+      top: 37px;
+
+      @media @max1400 {
+        top: 57px;
+      }
+    }
+
+    &__characteristics {
+      margin-bottom: 0;
+    }
+
+    &__btns {
+
+      @media @max1400 {
+        margin-bottom: 22px;
+      }
+    }
+  }
+}

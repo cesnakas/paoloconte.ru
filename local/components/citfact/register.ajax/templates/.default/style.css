@@ -1,0 +1,8 @@
+.reg_errors_cont p,
+.reg_result_cont p {
+    display: inline-block;
+    background: #f94d41;
+    margin: 9px 0 7px;
+    padding: 3px 14px;
+    color: #fff;
+}

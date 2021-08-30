@@ -1,0 +1,47 @@
+.form {
+
+  &__item {
+    margin-bottom: 25px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    select {
+      height: 42px;
+      max-width: 100%;
+    }
+
+    .error + .label-alert {
+      display: inline-flex;
+    }
+    .input-error {
+      border: .8px solid #950F21 !important;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    span{
+      text-transform:lowercase;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 100px;
+  }
+
+  input:not(.btn),
+  textarea {
+    width: 100%;
+    max-width: 430px;
+    padding: 7px 12px;
+    border: 1px solid #D8D9D1;
+    background-color: #fff;
+  }
+}

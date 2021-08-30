@@ -1,0 +1,100 @@
+body input[type="tel"] {
+  height: 38px;
+  padding: 0 13px;
+  border: none;
+  background: #fff;
+  line-height: normal;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid #dadada;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  border-radius: 0!important;
+}
+body input[type="tel"].style2 {
+  background: #f4f4f4;
+  border: none;
+}
+body input[type="tel"].error {
+  border-color: #F94D41 !important;
+}
+.search-top input[type="tel"] {
+  height: 88px;
+  border: none;
+  font-size: 17px;
+  padding: 0 35px;
+}
+
+.oferta {
+  margin: 10px;
+  font-size: 12px;
+  line-height: 1.2;
+  text-align: center;
+  color: #b8b8b8;
+
+}
+.oferta-mini {
+  margin: 0;
+  text-align: left;
+  font-size: x-small;
+  line-height: 1;
+  position: relative;
+  top: 5px;
+  color: #b8b8b8;
+  height: 0px;
+}
+.oferta-footer {
+  margin: 0;
+  text-align: right;
+  background: #444243;
+  padding-bottom: 14px;
+  padding-right: 41px;
+  color: #b8b8b8;
+}
+
+div#cookie-alert {
+  position: fixed;
+  display: block !important;
+  bottom: -1px;
+  text-align: right;
+  padding: 2px 50px 10px 70px;
+  z-index: 10000001 !important;
+  border-bottom: 1px solid #bcbcbc;
+  background: white;
+  box-shadow: inset 0 5px 11px -5px rgba(51, 51, 51, 0.58);
+  font-size: 11px;
+  opacity: 0.9;
+  line-height: 1.4;
+  color: #b8b8b8;
+}
+label#label_PERSONAL_DATA a,
+.oferta-footer a,
+.oferta-mini a,
+.oferta a {
+  color: #999 !important;
+  margin: 0px;
+}
+#cookie-alert a {
+  color: #999;
+}
+div#cookie-alert.hidden {
+  transition: all 0.8s;
+  bottom: -95px;
+}
+div#cookie-alert-close {
+  text-align: right;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  padding-bottom: 0px;
+  cursor: pointer;
+  display: inline-block;
+  right: 20px;
+  top: 0;
+  float: right;
+  color: #999;
+}
+form input.error, form textarea.error {
+  border: 1px solid !important;
+  border-color: #F94D41 !important;
+}

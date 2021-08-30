@@ -1,0 +1,44 @@
+.tag {
+  pointer-events: none;
+
+  &__item {
+    display: block;
+    width: 45px;
+    font-size: 12px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media @max767 {
+      width: 36px;
+      font-size: 10px;
+      line-height: 26px;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+
+    &--hit {
+      background-color: #333333;
+    }
+
+    &--new{
+      background-color: #4CCA80;
+    }
+
+    &--sell {
+      background-color: #d60000;
+      position: relative;
+      padding-left: 5px;
+      font-weight: 500;
+      &:before{
+        content: ' - ';
+        position: absolute;
+        left: 5px;
+      }
+
+    }
+  }
+}

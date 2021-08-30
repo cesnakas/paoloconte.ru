@@ -1,0 +1,1 @@
+Я согласен с условиями обработки <a href="/help/dogovor-oferty/#152-fz" target="_blank">персональных данных</a>

@@ -1,0 +1,34 @@
+.iconPrev{
+    background-image: url("images/mainIcon/p-2.png");
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center;
+}
+
+.iconPrevNA{
+    background-image: url("images/mainIcon/p-1.png");
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center;
+}
+
+.iconNext{
+    background-image: url("images/mainIcon/n-2.png");
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center;
+}
+
+.iconNextNA{
+    background-image: url("images/mainIcon/n-1.png");
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center;
+}
+
+.iconBack{
+    background-image: url("images/mainIcon/b-2.png");
+    background-repeat: no-repeat;
+    background-size: 26px;
+    background-position: center;
+}
